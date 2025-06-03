@@ -7,25 +7,52 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.myapplication.ui.home.HomeFragment"
+        android:name="com.example.musicallens.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_camera"
+            app:destination="@id/navigation_camera" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tutorial"
+            app:destination="@id/navigation_tutorial" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_tutorial"
-        android:name="com.example.myapplication.ui.tutorial.TutorialFragment"
+        android:name="com.example.musicallens.ui.tutorial.TutorialFragment"
         android:label="@string/title_tutorial"
         tools:layout="@layout/fragment_tutorial" />
 
     <fragment
+        android:id="@+id/navigation_instrument"
+        android:name="com.example.musicallens.ui.instrument.InstrumentFragment"
+        android:label="@string/title_instrument"
+        tools:layout="@layout/fragment_instrument" />
+
+
+
+    <fragment
         android:id="@+id/navigation_camera"
-        android:name="com.example.myapplication.ui.camera.CameraFragment"
+        android:name="com.example.musicallens.ui.camera.CameraFragment"
         android:label="@string/title_camera"
-        tools:layout="@layout/fragment_camera" />
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_navigation_camera_to_imgProcessFragment"
+            app:destination="@id/imgProcessFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.example.myapplication.ui.settings.SettingsFragment"
+        android:name="com.example.musicallens.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/imgProcessFragment"
+        android:name="com.example.musicallens.ui.img_process.ImgProcessFragment"
+        android:label="fragment_img_process"
+        tools:layout="@layout/fragment_img_process" />
 </navigation>

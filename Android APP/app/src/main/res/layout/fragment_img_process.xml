@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.img_process.ImgProcessFragment">
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/md_theme_surfaceContainer"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Movable dots for edge correction -->
+<!--    <ImageView-->
+<!--        android:id="@+id/dotTopLeft"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:elevation="2dp"-->
+<!--        android:background="@drawable/dot_background"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/dotTopRight"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:elevation="2dp"-->
+<!--        android:background="@drawable/dot_background"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/dotBottomLeft"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginBottom="120dp"-->
+<!--        android:background="@drawable/dot_background"-->
+<!--        android:elevation="2dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/dotBottomRight"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginBottom="120dp"-->
+<!--        android:background="@drawable/dot_background"-->
+<!--        android:elevation="2dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/dotTopLeft"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/dot_background"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/dotTopRight"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/dot_background"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/dotBottomRight"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/dot_background"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/dotBottomLeft"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/dot_background"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btnCrop"
+        android:layout_width="134dp"
+        android:layout_height="88dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/md_theme_primary"
+        android:text="Crop"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottom_view" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
