@@ -1,0 +1,348 @@
+kotlin version: 2.0.21
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: G:/LICENTA/MusicalLens/app/src/main/java/com/example/musicallens/ui/home/HomeFragment.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:65)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:38)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:246)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipeline.kt:142)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:148)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:103)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:49)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally$lambda$9$compile(IncrementalCompilerRunner.kt:249)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:267)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:120)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:675)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:92)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1660)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:displayMusicFolders visibility:private modality:FINAL <> ($this:com.example.musicallens.ui.home.HomeFragment) returnType:kotlin.Unit
+  $this: VALUE_PARAMETER name:<this> type:com.example.musicallens.ui.home.HomeFragment
+  BLOCK_BODY
+    VAR name:appRootDirectory type:java.io.File [val]
+      CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] java.io.File?, p1: @[FlexibleNullability] kotlin.String?) declared in java.io.File' type=java.io.File origin=null
+        p0: CALL 'public abstract fun getFilesDir (): @[FlexibleNullability] java.io.File? declared in android.content.Context' type=@[FlexibleNullability] java.io.File? origin=GET_PROPERTY
+          $this: CALL 'public final fun requireContext (): @[EnhancedNullability] android.content.Context [fake_override] declared in com.example.musicallens.ui.home.HomeFragment' type=@[EnhancedNullability] android.content.Context origin=null
+            $this: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+        p1: CONST String type=kotlin.String value="MusicallensData"
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public open fun exists (): kotlin.Boolean declared in java.io.File' type=kotlin.Boolean origin=null
+              $this: GET_VAR 'val appRootDirectory: java.io.File [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=java.io.File origin=null
+          arg1: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public open fun isDirectory (): kotlin.Boolean declared in java.io.File' type=kotlin.Boolean origin=GET_PROPERTY
+              $this: GET_VAR 'val appRootDirectory: java.io.File [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=java.io.File origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          VAR name:noFoldersTextView type:android.widget.TextView [val]
+            CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.TextView origin=null
+              <T>: android.widget.TextView
+              $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.TextView' type=android.widget.TextView origin=null
+                p0: CALL 'public open fun getContext (): @[EnhancedNullability] android.content.Context? [fake_override] declared in com.example.musicallens.ui.home.HomeFragment' type=@[EnhancedNullability] android.content.Context? origin=GET_PROPERTY
+                  $this: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+              block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$3 (this$0: com.example.musicallens.ui.home.HomeFragment): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                  this$0: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+          CALL 'public open fun removeAllViews (): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+            $this: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:recentFilesContainer type:@[EnhancedNullability] android.widget.LinearLayout visibility:public [final] declared in com.example.musicallens.databinding.FragmentHomeBinding' type=@[EnhancedNullability] android.widget.LinearLayout superQualifierSymbol=com.example.musicallens.databinding.FragmentHomeBinding origin=null
+              receiver: CALL 'private final fun <get-binding> (): com.example.musicallens.databinding.FragmentHomeBinding declared in com.example.musicallens.ui.home.HomeFragment' type=com.example.musicallens.databinding.FragmentHomeBinding origin=GET_PROPERTY
+                $this: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+          CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+            $this: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:recentFilesContainer type:@[EnhancedNullability] android.widget.LinearLayout visibility:public [final] declared in com.example.musicallens.databinding.FragmentHomeBinding' type=@[EnhancedNullability] android.widget.LinearLayout superQualifierSymbol=com.example.musicallens.databinding.FragmentHomeBinding origin=null
+              receiver: CALL 'private final fun <get-binding> (): com.example.musicallens.databinding.FragmentHomeBinding declared in com.example.musicallens.ui.home.HomeFragment' type=com.example.musicallens.databinding.FragmentHomeBinding origin=GET_PROPERTY
+                $this: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+            p0: GET_VAR 'val noFoldersTextView: android.widget.TextView [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=android.widget.TextView origin=null
+          RETURN type=kotlin.Nothing from='private final fun displayMusicFolders (): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment'
+            GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:INSTANCE type:kotlin.Unit visibility:public [final,static] declared in kotlin.Unit' type=kotlin.Unit origin=null
+    VAR name:musicFolders type:@[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? [val]
+      CALL 'public open fun listFiles (p0: @[FlexibleNullability] java.io.FileFilter?): @[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? declared in java.io.File' type=@[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? origin=null
+        $this: GET_VAR 'val appRootDirectory: java.io.File [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=java.io.File origin=null
+        p0: BLOCK type=java.io.FileFilter origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=java.io.FileFilter origin=null
+            <T>: java.io.FileFilter
+            dynamicCall: CALL 'public final fun accept (): java.io.FileFilter declared in kotlin.jvm.internal.invokeDynamic' type=java.io.FileFilter origin=null
+            bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+              tag: CONST Int type=kotlin.Int value=6
+              owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+              name: CONST String type=kotlin.String value="metafactory"
+              descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+              isInterface: CONST Boolean type=kotlin.Boolean value=false
+            bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+              CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                method: RAW_FUNCTION_REFERENCE 'public abstract fun accept (p0: @[FlexibleNullability] java.io.File?): kotlin.Boolean declared in java.io.FileFilter' type=kotlin.Any
+              RAW_FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$4 (file: @[FlexibleNullability] java.io.File?): kotlin.Boolean declared in com.example.musicallens.ui.home.HomeFragment' type=kotlin.Any
+              CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                method: RAW_FUNCTION_REFERENCE 'public abstract fun accept (p0: @[FlexibleNullability] java.io.File?): kotlin.Boolean [fake_override] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+    VAR name:container type:android.widget.LinearLayout [val]
+      BLOCK type=android.widget.LinearLayout origin=null
+        VAR IR_TEMPORARY_VARIABLE name:tmp0 type:kotlin.Any? [val]
+          GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:recentFilesContainer type:@[EnhancedNullability] android.widget.LinearLayout visibility:public [final] declared in com.example.musicallens.databinding.FragmentHomeBinding' type=@[EnhancedNullability] android.widget.LinearLayout superQualifierSymbol=com.example.musicallens.databinding.FragmentHomeBinding origin=null
+            receiver: CALL 'private final fun <get-binding> (): com.example.musicallens.databinding.FragmentHomeBinding declared in com.example.musicallens.ui.home.HomeFragment' type=com.example.musicallens.databinding.FragmentHomeBinding origin=GET_PROPERTY
+              $this: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+        CALL 'public final fun checkNotNullExpressionValue (value: kotlin.Any?, expression: kotlin.String): kotlin.Unit declared in kotlin.jvm.internal.Intrinsics' type=kotlin.Unit origin=null
+          value: GET_VAR 'val tmp0: kotlin.Any? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=kotlin.Any? origin=null
+          expression: CONST String type=kotlin.String value="recentFilesContainer"
+        GET_VAR 'val tmp0: kotlin.Any? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=kotlin.Any? origin=null
+    CALL 'public open fun removeAllViews (): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val container: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=android.widget.LinearLayout origin=null
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun ANDAND (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+              arg0: GET_VAR 'val musicFolders: @[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=@[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? origin=null
+              arg1: CONST Null type=kotlin.Nothing? value=null
+          arg1: CALL 'public final fun isNotEmpty <T> (): kotlin.Boolean [inline] declared in kotlin.collections.ArraysKt' type=kotlin.Boolean origin=null
+            <T>: @[FlexibleNullability] java.io.File?
+            $receiver: GET_VAR 'val musicFolders: @[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=@[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          CALL 'public final fun sortByDescending <T, R> (selector: kotlin.Function1<T of kotlin.collections.ArraysKt.sortByDescending, R of kotlin.collections.ArraysKt.sortByDescending?>): kotlin.Unit [inline] declared in kotlin.collections.ArraysKt' type=kotlin.Unit origin=null
+            <T>: @[FlexibleNullability] java.io.File?
+            <R>: kotlin.Long
+            $receiver: GET_VAR 'val musicFolders: @[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=@[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? origin=null
+            selector: BLOCK type=kotlin.Function1<@[FlexibleNullability] java.io.File?, kotlin.Long?> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$5 (it: @[FlexibleNullability] java.io.File?): kotlin.Long? declared in com.example.musicallens.ui.home.HomeFragment' type=kotlin.Function1<@[FlexibleNullability] java.io.File?, kotlin.Long?> origin=INLINE_LAMBDA reflectionTarget=null
+          CALL 'public final fun forEach <T> (action: kotlin.Function1<T of kotlin.collections.ArraysKt.forEach, kotlin.Unit>): kotlin.Unit [inline] declared in kotlin.collections.ArraysKt' type=kotlin.Unit origin=null
+            <T>: @[FlexibleNullability] java.io.File?
+            $receiver: GET_VAR 'val musicFolders: @[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=@[FlexibleNullability] @[FlexibleArrayElementVariance] kotlin.Array<out @[FlexibleNullability] java.io.File?>? origin=null
+            action: BLOCK type=kotlin.Function1<@[FlexibleNullability] java.io.File?, kotlin.Unit> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$13 (this$0: com.example.musicallens.ui.home.HomeFragment, $container: android.widget.LinearLayout, folder: @[FlexibleNullability] java.io.File?): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=kotlin.Function1<@[FlexibleNullability] java.io.File?, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                this$0: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+                $container: GET_VAR 'val container: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=android.widget.LinearLayout origin=null
+      BRANCH
+        if: CONST Boolean type=kotlin.Boolean value=true
+        then: BLOCK type=kotlin.Unit origin=null
+          VAR name:noFoldersTextView type:android.widget.TextView [val]
+            CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.TextView origin=null
+              <T>: android.widget.TextView
+              $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.TextView' type=android.widget.TextView origin=null
+                p0: CALL 'public open fun getContext (): @[EnhancedNullability] android.content.Context? [fake_override] declared in com.example.musicallens.ui.home.HomeFragment' type=@[EnhancedNullability] android.content.Context? origin=GET_PROPERTY
+                  $this: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+              block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$15 (this$0: com.example.musicallens.ui.home.HomeFragment): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                  this$0: GET_VAR '<this>: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=com.example.musicallens.ui.home.HomeFragment origin=null
+          CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+            $this: GET_VAR 'val container: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=android.widget.LinearLayout origin=null
+            p0: GET_VAR 'val noFoldersTextView: android.widget.TextView [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders' type=android.widget.TextView origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:40)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:406)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:423)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:168)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:62)
+	... 44 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:displayMusicFolders$lambda$13 visibility:private modality:FINAL <> (this$0:com.example.musicallens.ui.home.HomeFragment, $container:android.widget.LinearLayout, folder:@[FlexibleNullability] java.io.File?) returnType:kotlin.Unit
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:this$0 index:0 type:com.example.musicallens.ui.home.HomeFragment
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$container index:1 type:android.widget.LinearLayout
+  VALUE_PARAMETER name:folder index:2 type:@[FlexibleNullability] java.io.File?
+  BLOCK_BODY
+    VAR name:$i$a$-forEach-HomeFragment$displayMusicFolders$2 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    VAR name:folderName type:@[FlexibleNullability] kotlin.String? [val]
+      CALL 'public open fun getName (): @[FlexibleNullability] kotlin.String? declared in java.io.File' type=@[FlexibleNullability] kotlin.String? origin=GET_PROPERTY
+        $this: GET_VAR 'folder: @[FlexibleNullability] java.io.File? declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=@[FlexibleNullability] java.io.File? origin=null
+    VAR name:folderEntryLayout type:android.widget.LinearLayout [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.LinearLayout origin=null
+        <T>: android.widget.LinearLayout
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.LinearLayout' type=android.widget.LinearLayout origin=null
+          p0: CALL 'public open fun getContext (): @[EnhancedNullability] android.content.Context? [fake_override] declared in com.example.musicallens.ui.home.HomeFragment' type=@[EnhancedNullability] android.content.Context? origin=GET_PROPERTY
+            $this: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.LinearLayout, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$13$lambda$7 (this$0: com.example.musicallens.ui.home.HomeFragment): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.LinearLayout, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+            this$0: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+    VAR name:icon type:android.widget.ImageView [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.ImageView origin=null
+        <T>: android.widget.ImageView
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.ImageView' type=android.widget.ImageView origin=null
+          p0: CALL 'public open fun getContext (): @[EnhancedNullability] android.content.Context? [fake_override] declared in com.example.musicallens.ui.home.HomeFragment' type=@[EnhancedNullability] android.content.Context? origin=GET_PROPERTY
+            $this: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.ImageView, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$13$lambda$9 (this$0: com.example.musicallens.ui.home.HomeFragment, $folderName: @[FlexibleNullability] kotlin.String?): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.ImageView, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+            this$0: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+            $folderName: GET_VAR 'val folderName: @[FlexibleNullability] kotlin.String? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=@[FlexibleNullability] kotlin.String? origin=null
+    VAR name:folderNameTextView type:android.widget.TextView [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.TextView origin=null
+        <T>: android.widget.TextView
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.TextView' type=android.widget.TextView origin=null
+          p0: CALL 'public open fun getContext (): @[EnhancedNullability] android.content.Context? [fake_override] declared in com.example.musicallens.ui.home.HomeFragment' type=@[EnhancedNullability] android.content.Context? origin=GET_PROPERTY
+            $this: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$13$lambda$10 ($folderName: @[FlexibleNullability] kotlin.String?, this$0: com.example.musicallens.ui.home.HomeFragment): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+            $folderName: GET_VAR 'val folderName: @[FlexibleNullability] kotlin.String? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=@[FlexibleNullability] kotlin.String? origin=null
+            this$0: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val folderEntryLayout: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val icon: android.widget.ImageView [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.ImageView origin=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val folderEntryLayout: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val folderNameTextView: android.widget.TextView [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.TextView origin=null
+    CALL 'public open fun setOnClickListener (p0: @[EnhancedNullability] android.view.View.OnClickListener?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val folderEntryLayout: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.LinearLayout origin=null
+      p0: BLOCK type=android.view.View.OnClickListener origin=LAMBDA
+        COMPOSITE type=kotlin.Unit origin=null
+        CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=android.view.View.OnClickListener origin=null
+          <T>: android.view.View.OnClickListener
+          dynamicCall: CALL 'public final fun onClick (p0: com.example.musicallens.ui.home.HomeFragment, p1: @[FlexibleNullability] kotlin.String?): android.view.View.OnClickListener declared in kotlin.jvm.internal.invokeDynamic' type=android.view.View.OnClickListener origin=null
+            p0: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=com.example.musicallens.ui.home.HomeFragment origin=null
+            p1: GET_VAR 'val folderName: @[FlexibleNullability] kotlin.String? [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=@[FlexibleNullability] kotlin.String? origin=null
+          bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+            tag: CONST Int type=kotlin.Int value=6
+            owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+            name: CONST String type=kotlin.String value="metafactory"
+            descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+            isInterface: CONST Boolean type=kotlin.Boolean value=false
+          bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+            CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+              method: RAW_FUNCTION_REFERENCE 'public abstract fun onClick (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit declared in android.view.View.OnClickListener' type=kotlin.Any
+            RAW_FUNCTION_REFERENCE 'private final fun displayMusicFolders$lambda$13$lambda$12 (this$0: com.example.musicallens.ui.home.HomeFragment, $folderName: @[FlexibleNullability] kotlin.String?, it: @[FlexibleNullability] android.view.View?): kotlin.Unit declared in com.example.musicallens.ui.home.HomeFragment' type=kotlin.Any
+            CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+              method: RAW_FUNCTION_REFERENCE 'public abstract fun onClick (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR '$container: android.widget.LinearLayout declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val folderEntryLayout: android.widget.LinearLayout [val] declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13' type=android.widget.LinearLayout origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:593)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:122)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:413)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1101)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 54 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:displayMusicFolders$lambda$13$lambda$10 visibility:private modality:FINAL <> ($receiver:android.widget.TextView, $folderName:@[FlexibleNullability] kotlin.String?, this$0:com.example.musicallens.ui.home.HomeFragment) returnType:kotlin.Unit
+  $receiver: VALUE_PARAMETER name:$this$apply type:android.widget.TextView
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:$folderName index:0 type:@[FlexibleNullability] kotlin.String?
+  VALUE_PARAMETER BOUND_VALUE_PARAMETER name:this$0 index:1 type:com.example.musicallens.ui.home.HomeFragment
+  BLOCK_BODY
+    VAR name:$i$a$-apply-HomeFragment$displayMusicFolders$2$folderNameTextView$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    CALL 'public open fun setLayoutParams (p0: @[FlexibleNullability] android.view.ViewGroup.LayoutParams?): kotlin.Unit [fake_override] declared in android.widget.TextView' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$apply: android.widget.TextView declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=android.widget.TextView origin=null
+      p0: CONSTRUCTOR_CALL 'public constructor <init> (p0: kotlin.Int, p1: kotlin.Int) declared in android.widget.LinearLayout.LayoutParams' type=android.widget.LinearLayout.LayoutParams origin=null
+        p0: CONST Int type=kotlin.Int value=-2
+        p1: CONST Int type=kotlin.Int value=-2
+    CALL 'public final fun setText (p0: @[FlexibleNullability] kotlin.CharSequence?): kotlin.Unit declared in android.widget.TextView' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$apply: android.widget.TextView declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=android.widget.TextView origin=null
+      p0: GET_VAR '$folderName: @[FlexibleNullability] kotlin.String? declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=@[FlexibleNullability] kotlin.String? origin=null
+    CALL 'public open fun setTextSize (p0: kotlin.Float): kotlin.Unit declared in android.widget.TextView' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$apply: android.widget.TextView declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=android.widget.TextView origin=null
+      p0: CALL 'private final fun <get-sp> (): kotlin.Float declared in com.example.musicallens.ui.home.HomeFragment' type=kotlin.Float origin=GET_PROPERTY
+        $this: GET_VAR 'this$0: com.example.musicallens.ui.home.HomeFragment declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=com.example.musicallens.ui.home.HomeFragment origin=null
+        $receiver: CONST Int type=kotlin.Int value=18
+    SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:textStyle type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+      value: CONST Int type=kotlin.Int value=1
+    CALL 'public open fun setTextColor (p0: kotlin.Int): kotlin.Unit declared in android.widget.TextView' type=kotlin.Unit origin=null
+      $this: GET_VAR '$this$apply: android.widget.TextView declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=android.widget.TextView origin=null
+      p0: CALL 'public open fun getColor (p0: kotlin.Int, p1: @[EnhancedNullability] android.content.res.Resources.Theme?): kotlin.Int declared in android.content.res.Resources' type=kotlin.Int origin=null
+        $this: CALL 'public open fun getResources (): @[FlexibleNullability] android.content.res.Resources? [fake_override] declared in android.widget.TextView' type=@[FlexibleNullability] android.content.res.Resources? origin=GET_PROPERTY
+          $this: GET_VAR '$this$apply: android.widget.TextView declared in com.example.musicallens.ui.home.HomeFragment.displayMusicFolders$lambda$13$lambda$10' type=android.widget.TextView origin=null
+        p0: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:md_theme_onTertiary type:kotlin.Int visibility:public [static] declared in com.example.musicallens.R.color' type=kotlin.Int superQualifierSymbol=com.example.musicallens.R.color origin=null
+        p1: CONST Null type=kotlin.Nothing? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:790)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.declarations.IrVariable.accept(IrVariable.kt:36)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 78 more
+Caused by: java.lang.AssertionError: access of const val: SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:textStyle type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+  value: CONST Int type=kotlin.Int value=1
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:861)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitSetField(IrElementVisitor.kt:206)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:908)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrSetField.accept(IrSetField.kt:21)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 95 more
+
+

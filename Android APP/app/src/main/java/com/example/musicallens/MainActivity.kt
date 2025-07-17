@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Load theme preference (default to Light Mode if not set)
         sharedPreferences = getSharedPreferences("settings", MODE_PRIVATE)
         val isDarkMode = sharedPreferences.getBoolean("dark_mode", false) // Default is false (Light Mode)
 
@@ -54,7 +53,12 @@ class MainActivity : AppCompatActivity() {
 
             // Hide main navigation bar in CameraFragment
             it.addOnDestinationChangedListener { _, destination, _ ->
-                navView.visibility = if (destination.id == R.id.navigation_camera || destination.id == R.id.imgProcessFragment) View.GONE else View.VISIBLE
+                navView.visibility = if (destination.id == R.id.navigation_camera ||
+                    destination.id == R.id.imgProcessFragment   ||
+                    destination.id == R.id.cropped_img          ||
+                    destination.id == R.id.displayData          ||
+                    destination.id == R.id.navigation_favorites ||
+                    destination.id == R.id.navigation_tutorial) View.GONE else View.VISIBLE
             }
         }
 

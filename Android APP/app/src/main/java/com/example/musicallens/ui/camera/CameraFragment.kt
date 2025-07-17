@@ -91,9 +91,6 @@ class CameraFragment : Fragment(), CameraBridgeViewBase.CvCameraViewListener2 {
         val mat = inputFrame?.rgba() ?: Mat()
 
         val edgeMat = Mat()
-//        Imgproc.cvtColor(mat, edgeMat, Imgproc.COLOR_RGBA2GRAY)
-//        Imgproc.Canny(edgeMat, edgeMat, 80.0, 100.0)
-//        Core.bitwise_not(edgeMat, edgeMat)
 
         if (imgTaken) {
             capturedBitmap = createBitmap(mat.cols(), mat.rows())

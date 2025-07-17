@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- Search Bar -->
     <SearchView
         android:id="@+id/search_view"
         android:layout_width="0dp"
@@ -16,7 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- First Card (Icons) -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="352dp"
@@ -40,33 +38,32 @@
             android:weightSum="3"
             android:background="@color/md_theme_tertiary">
 
-            <!-- Saved Files -->
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:contentDescription="Saved Files"-->
+<!--                    android:src="@drawable/ic_baseline_save_24" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingTop="4dp"-->
+<!--                    android:text="@string/title_saved_files"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/md_theme_onTertiary"/>-->
+<!--            </LinearLayout>-->
+
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:contentDescription="Saved Files"
-                    android:src="@drawable/ic_baseline_save_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingTop="4dp"
-                    android:text="@string/title_saved_files"
-                    android:textSize="14sp"
-                    android:textColor="@color/md_theme_onTertiary"/>
-            </LinearLayout>
-
-            <!-- Favorites -->
-            <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/favoritesLayout"
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -84,13 +81,13 @@
                     android:gravity="center"
                     android:paddingTop="4dp"
                     android:text="@string/title_favorites"
-                    android:textSize="14sp"
-                    android:textColor="@color/md_theme_onTertiary" />
+                    android:textColor="@color/md_theme_onTertiary"
+                    android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Tutorial -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/tutorialLayout"
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -108,20 +105,18 @@
                     android:gravity="center"
                     android:paddingTop="4dp"
                     android:text="@string/title_tutorial"
-                    android:textSize="14sp"
-                    android:textColor="@color/md_theme_onTertiary" />
+                    android:textColor="@color/md_theme_onTertiary"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <!-- Second Card (Previous Files) -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_previous_files"
         android:layout_width="352dp"
-        android:layout_height="418dp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_height="418dp" android:layout_marginHorizontal="16dp"
         android:translationY="100dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
@@ -135,7 +130,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:weightSum="3"
             android:background="@color/md_theme_tertiary"
             app:layout_constraintBottom_toTopOf="@+id/nav_view"
             app:layout_constraintEnd_toEndOf="parent"
@@ -152,26 +146,10 @@
                 android:textColor="@color/md_theme_onTertiary" />
 
             <LinearLayout
-                android:outlineAmbientShadowColor="@color/md_theme_tertiary"
+                android:id="@+id/recent_files_container" android:outlineAmbientShadowColor="@color/md_theme_tertiary"
                 android:layout_width="match_parent"
-                android:layout_height="208dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
                 android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:src="@drawable/ic_baseline_file_24" />
-
-                <ImageView
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:src="@drawable/ic_baseline_file_24" />
-
-                <ImageView
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:src="@drawable/ic_baseline_file_24" />
             </LinearLayout>
 
         </LinearLayout>
@@ -179,7 +157,6 @@
     </androidx.cardview.widget.CardView>
 
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -189,5 +166,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    <!--    android:background="@color/md_theme_secondaryContainer"-->
 </androidx.constraintlayout.widget.ConstraintLayout>

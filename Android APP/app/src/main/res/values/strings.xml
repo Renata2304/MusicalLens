@@ -4,8 +4,12 @@
     <string name="title_tutorial">Tutorial</string>
     <string name="title_settings">Settings</string>
     <string name="title_camera">Camera</string>
-    <string name="title_instrument">Instrument</string>
     <string name="title_first">First</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_crop">Crop</string>
+    <string name="title_oemer">Oemer</string>
+    <string name="title_data">Data</string>
+    <string name="title_img_process">ImgProcess</string>
 
     <string name="title_file">File</string>
     <string name="title_saved_files">Saved Files</string>
@@ -13,4 +17,12 @@
     <string name="title_favorites">Favorites</string>
     <string name="recent_files">Recent Files</string>
     <string name="theme">Dark Theme</string>
+
+    <string name="default_partitura_name">Partitura</string>
+    <string name="xml_content_placeholder">No XML content available.</string>
+    <string name="cropped_images_title">Cropped Images</string>
+    <string name="musicxml_title">MusicXML files</string>
+    <string name="add_images_button_description">Add Images</string>
+
+    <string name="no_saved_music_folders">No recent files detected.</string>
 </resources>

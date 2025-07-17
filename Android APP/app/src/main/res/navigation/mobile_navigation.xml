@@ -16,9 +16,18 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_camera"
             app:destination="@id/navigation_camera" />
+
         <action
             android:id="@+id/action_navigation_home_to_navigation_tutorial"
             app:destination="@id/navigation_tutorial" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_displayData"
+            app:destination="@id/displayData" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_favorites"
+            app:destination="@id/navigation_favorites" />
+
     </fragment>
 
     <fragment
@@ -28,10 +37,14 @@
         tools:layout="@layout/fragment_tutorial" />
 
     <fragment
-        android:id="@+id/navigation_instrument"
-        android:name="com.example.musicallens.ui.instrument.InstrumentFragment"
-        android:label="@string/title_instrument"
-        tools:layout="@layout/fragment_instrument" />
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.musicallens.ui.favorites.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_displayData"
+            app:destination="@id/displayData" />
+    </fragment>
 
 
 
@@ -50,9 +63,35 @@
         android:name="com.example.musicallens.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+
     <fragment
         android:id="@+id/imgProcessFragment"
         android:name="com.example.musicallens.ui.img_process.ImgProcessFragment"
-        android:label="fragment_img_process"
-        tools:layout="@layout/fragment_img_process" />
+        android:label="@string/title_img_process"
+        tools:layout="@layout/fragment_img_process" >
+        <action
+            android:id="@+id/action_imgProcessFragment_to_cropped_img"
+            app:destination="@id/cropped_img" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cropped_img"
+        android:name="com.example.musicallens.ui.img_process.CroppedImage"
+        android:label="@string/title_crop"
+        tools:layout="@layout/fragment_cropped_image" >
+        <action
+            android:id="@+id/action_cropped_img_to_displayData"
+            app:destination="@id/displayData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/displayData"
+        android:name="com.example.musicallens.ui.data.DisplayDataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data_display" >
+        <argument
+            android:name="folderName"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

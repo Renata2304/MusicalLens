@@ -21,81 +21,41 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="640dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@id/bottom_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Movable dots for edge correction -->
 <!--    <ImageView-->
 <!--        android:id="@+id/dotTopLeft"-->
 <!--        android:layout_width="20dp"-->
 <!--        android:layout_height="20dp"-->
-<!--        android:elevation="2dp"-->
-<!--        android:background="@drawable/dot_background"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--        android:src="@drawable/dot_background"-->
+<!--        android:visibility="gone" />-->
 
 <!--    <ImageView-->
 <!--        android:id="@+id/dotTopRight"-->
 <!--        android:layout_width="20dp"-->
 <!--        android:layout_height="20dp"-->
-<!--        android:elevation="2dp"-->
-<!--        android:background="@drawable/dot_background"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/dotBottomLeft"-->
-<!--        android:layout_width="20dp"-->
-<!--        android:layout_height="20dp"-->
-<!--        android:layout_marginStart="4dp"-->
-<!--        android:layout_marginBottom="120dp"-->
-<!--        android:background="@drawable/dot_background"-->
-<!--        android:elevation="2dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+<!--        android:src="@drawable/dot_background"-->
+<!--        android:visibility="gone" />-->
 
 <!--    <ImageView-->
 <!--        android:id="@+id/dotBottomRight"-->
 <!--        android:layout_width="20dp"-->
 <!--        android:layout_height="20dp"-->
-<!--        android:layout_marginBottom="120dp"-->
-<!--        android:background="@drawable/dot_background"-->
-<!--        android:elevation="2dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+<!--        android:src="@drawable/dot_background"-->
+<!--        android:visibility="gone" />-->
 
-    <ImageView
-        android:id="@+id/dotTopLeft"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/dot_background"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/dotTopRight"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/dot_background"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/dotBottomRight"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/dot_background"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/dotBottomLeft"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/dot_background"
-        android:visibility="gone" />
-
+<!--    <ImageView-->
+<!--        android:id="@+id/dotBottomLeft"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:src="@drawable/dot_background"-->
+<!--        android:visibility="gone" />-->
 
     <Button
         android:id="@+id/btnCrop"
@@ -109,7 +69,5 @@
         app:layout_constraintEnd_toEndOf="@+id/bottom_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom_view" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

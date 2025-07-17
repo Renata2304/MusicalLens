@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    id("com.chaquo.python")
 }
 
 android {
@@ -15,6 +17,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters += listOf("arm64-v8a", "x86_64")
+        }
     }
 
     buildTypes {
@@ -36,6 +42,26 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    flavorDimensions += "pyVersion"
+    productFlavors {
+        create("py310") { dimension = "pyVersion" }
+        create("py311") { dimension = "pyVersion" }
+    }
+}
+
+chaquopy {
+    productFlavors {
+        getByName("py310") { version = "3.10" }
+        getByName("py311") { version = "3.11" }
+    }
+    defaultConfig {
+        pip {
+            install("music21")
+            install("numpy")
+        }
+    }
+    sourceSets { }
 }
 
 dependencies {
@@ -49,10 +75,12 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(project(":opencv"))
+    implementation(libs.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-//    implementation("com.quickbirdstudios:opencv-contrib:4.5.3.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("androidx.cardview:cardview:1.0.0")
 
 }
