@@ -1,4 +1,4 @@
-# Licenta
+# Musical Lens
 
 This project presents the development of an innovative Android application designed to digitize musical scores and enable audio playback through advanced image processing techniques. The system employs Optical Music Recognition (OMR) for the accurate detection of musical notation (including notes, staves, and symbols) alongside Optical Character Recognition (OCR) for lyric extraction.
 
