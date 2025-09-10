@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">Home</string>
+    <string name="title_tutorial">Tutorial</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_first">First</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_crop">Crop</string>
+    <string name="title_oemer">Oemer</string>
+    <string name="title_data">Data</string>
+    <string name="title_img_process">ImgProcess</string>
+
+    <string name="title_file">File</string>
+    <string name="title_saved_files">Saved Files</string>
+    <string name="title_photo">Photo</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="recent_files">Recent Files</string>
+    <string name="theme">Dark Theme</string>
+    <string name="language">Language</string>
+
+    <string name="default_partitura_name">Music Sheet</string>
+    <string name="xml_content_placeholder">No XML content available.</string>
+    <string name="cropped_images_title">Cropped Images</string>
+    <string name="musicxml_title">MusicXML files</string>
+    <string name="add_images_button_description">Add Images</string>
+
+    <string name="no_saved_music_folders">No recent files detected.</string>
+
+
+    <!-- Tutorial -->
+    <string name="tutorial_title1">1. How to Add a Score?</string>
+    <string name="tutorial_text1">
+        "From the bottom navigation bar, tap the central button to open the camera. " +
+        "Position the sheet music as straight as possible and take a photo. If you're happy with the image, " +
+        "press 'Confirm'. Wait for the processing to finish, and then the score will open in the interactive editor, " +
+        "where you can view the images, download the MusicXML file, or convert it to MIDI format."
+    </string>
+
+        <string name="tutorial_title2">2. How to Use MusicXML and MIDI Files?</string>
+        <string name="html_content2">
+            MusicXML files can be viewed on websites such as
+            &lt;a href="https://www.soundslice.com/musicxml-viewer/"&gt;soundslice.com/musicxml-viewer/&lt;/a&gt;.
+            For MIDI files, you can import them into specialized apps or online platforms,
+            for example,
+            &lt;a href="https://pianotify.com/import-midi-file/"&gt;pianotify.com/import-midi-file&lt;/a&gt;.
+    </string>
+
+        <string name="tutorial_title3">3. Viewing Scores</string>
+        <string name="tutorial_text3">
+            "After adding a score, you will find it in the 'Recent Files' section. " +
+            "Tap on the name of the score to open and view it in the interactive editor."
+    </string>
+
+        <string name="tutorial_title4">4. Managing Favorites</string>
+        <string name="tutorial_text4">
+            "You can add a score to favorites by tapping the menu (arrow) next to " +
+            "the score name and selecting 'Add to Favorites'. You will then find them " +
+            "in the 'Favorites' section of the main menu."
+    </string>
+
+        <string name="tutorial_title5">5. Searching Scores</string>
+        <string name="tutorial_text5">
+            "Use the search bar at the top of the screen to quickly find " +
+            "scores by name. The results are filtered as you type."
+    </string>
+
+        <string name="tutorial_title6">6. Score Options and Deletion</string>
+        <string name="tutorial_text6">
+            "The menu (arrow) next to each score allows you to add it to favorites, " +
+            "remove it from favorites, or delete it completely from your device. " +
+            "Warning: deletion is permanent!"
+    </string>
+</resources>

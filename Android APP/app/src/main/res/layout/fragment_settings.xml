@@ -55,6 +55,21 @@
                 android:textColor="@color/md_theme_onTertiary"
                 android:checked="true"/>
 
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:translationY="40dp"
+                android:paddingVertical="12dp"
+                android:text="@string/language"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_onTertiary"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground" />
+
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

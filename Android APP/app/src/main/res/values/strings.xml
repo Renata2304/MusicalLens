@@ -1,28 +1,65 @@
 <resources>
-    <string name="app_name">Melody Lens</string>
-    <string name="title_home">Home</string>
+    <string name="app_name" translatable="false">Melody Lens</string>
+    <string name="title_home">Acasă</string>
     <string name="title_tutorial">Tutorial</string>
-    <string name="title_settings">Settings</string>
-    <string name="title_camera">Camera</string>
-    <string name="title_first">First</string>
-    <string name="title_scan">Scan</string>
-    <string name="title_crop">Crop</string>
-    <string name="title_oemer">Oemer</string>
-    <string name="title_data">Data</string>
-    <string name="title_img_process">ImgProcess</string>
+    <string name="title_settings">Setări</string>
+    <string name="title_camera">Cameră</string>
+    <string name="title_first">Primul</string>
+    <string name="title_scan">Scanează</string>
+    <string name="title_crop">Decupează</string>
+    <string name="title_oemer">Confirmă</string> <!-- dacă "Oemer" este un buton de confirmare -->
+    <string name="title_data">Date</string>
+    <string name="title_img_process">Procesare Imagine</string>
 
-    <string name="title_file">File</string>
-    <string name="title_saved_files">Saved Files</string>
-    <string name="title_photo">Photo</string>
-    <string name="title_favorites">Favorites</string>
-    <string name="recent_files">Recent Files</string>
-    <string name="theme">Dark Theme</string>
+    <string name="title_file">Fișier</string>
+    <string name="title_saved_files">Fișiere Salvate</string>
+    <string name="title_photo">Fotografie</string>
+    <string name="title_favorites">Favorite</string>
+    <string name="recent_files">Fișiere Recente</string>
+    <string name="theme">Temă Întunecată</string>
+    <string name="language">Limbă</string>
 
-    <string name="default_partitura_name">Partitura</string>
-    <string name="xml_content_placeholder">No XML content available.</string>
-    <string name="cropped_images_title">Cropped Images</string>
-    <string name="musicxml_title">MusicXML files</string>
-    <string name="add_images_button_description">Add Images</string>
+    <string name="default_partitura_name">Partitură</string>
+    <string name="xml_content_placeholder">Nu există conținut XML disponibil.</string>
+    <string name="cropped_images_title">Imagini Decupate</string>
+    <string name="musicxml_title">Fișiere MusicXML</string>
+    <string name="add_images_button_description">Adaugă Imagini</string>
 
-    <string name="no_saved_music_folders">No recent files detected.</string>
+    <string name="no_saved_music_folders">Nu au fost detectate fișiere recente.</string>
+
+
+    <!--    Tutorial-->
+    <string name="tutorial_title1">1. Cum adaugi o partitură?</string>
+    <string name="tutorial_text1">"Din bara de navigare de jos, apasă butonul central pentru a deschide camera. " +
+                "Poziționează partitura cât mai drept și fotografiaz-o. Dacă ești mulțumit de imagine, " +
+                "apasă 'Oemer'. Așteaptă procesarea, iar apoi partitura se va deschide în editorul interactiv, " +
+                "de unde poți vizualiza imaginile, descărca fișierul MusicXML sau transformă-l în format MIDI."</string>
+
+    <string name="tutorial_title2">2. Cum folosești fișierele MusicXML și MIDI?</string>
+    <string name="html_content2">
+        Fișierele MusicXML pot fi vizualizate pe site-uri precum
+        &lt;a href="https://www.soundslice.com/musicxml-viewer/"&gt;soundslice.com/musicxml-viewer/&lt;/a&gt;.
+        Pentru fișierele MIDI, le poți importa în aplicații specializate sau pe platforme online,
+        de exemplu,
+        &lt;a href="https://pianotify.com/import-midi-file/"&gt;pianotify.com/import-midi-file&lt;/a&gt;.
+    </string>
+
+    <string name="tutorial_title3">3. Vizualizarea Partiturilor</string>
+    <string name="tutorial_text3">"După ce ai adăugat o partitură, o vei găsi în secțiunea 'Fișiere Recente'. " +
+                "Apasă pe numele partiturii pentru a o deschide și vizualiza în editorul interactiv."</string>
+
+    <string name="tutorial_title4">4. Gestionarea Favoritelor</string>
+    <string name="tutorial_text4">"Poți adăuga o partitură la favorite apăsând pe meniul (săgeata) din dreptul " +
+                "numelui partiturii și selectând 'Adaugă la Favorite'. Le vei găsi apoi în secțiunea " +
+                "'Favorite' din meniul principal."</string>
+
+    <string name="tutorial_title5">5. Căutarea Partiturilor</string>
+    <string name="tutorial_text5">"Folosește bara de căutare din partea de sus a ecranului pentru a găsi rapid " +
+                "partiturile după nume. Rezultatele se filtrează pe măsură ce tastezi."</string>
+
+    <string name="tutorial_title6">6. Opțiuni Partitură și Ștergere</string>
+    <string name="tutorial_text6">"Meniul (săgeata) din dreptul fiecărei partituri îți permite să o adaugi la " +
+                "favorite, să o elimini din favorite sau să o ștergi complet de pe dispozitiv. " +
+                "Atenție, ștergerea este permanentă!"</string>
+
 </resources>

@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.musicallens.databinding.ActivityMainBinding
 import org.opencv.android.OpenCVLoader
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +22,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         sharedPreferences = getSharedPreferences("settings", MODE_PRIVATE)
-        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false) // Default is false (Light Mode)
+
+        val lang = sharedPreferences.getString("language", "ro") ?: "ro"
+        setLocale(lang)
+
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
 
         AppCompatDelegate.setDefaultNightMode(
             if (isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
@@ -69,4 +74,13 @@ class MainActivity : AppCompatActivity() {
             Log.d("OpenCV", "OpenCV initialized successfully.")
         }
     }
+
+    private fun setLocale(languageCode: String) {
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
 }
